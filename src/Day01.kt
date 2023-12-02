@@ -31,11 +31,8 @@ fun main() {
         }
 
             val transformedList = input.split(" ").map { it: String ->
-                println(it)
                 convertWordToNumber(it)
             }
-
-            println(transformedList)
 
             return transformedList.sumOf { it ->
                 val first = it.first { it.isDigit() }.digitToInt()
@@ -51,6 +48,6 @@ fun main() {
      check(part2(testInput.toString()) == 281)
 
     val input = readInput("Day01").toString()
+    part1(input).println()
     part2(input).println()
-   // part2(input).println()
 }
